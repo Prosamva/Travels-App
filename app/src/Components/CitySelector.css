@@ -1,0 +1,43 @@
+.select-container {
+    background: none;
+    transition: all 0.3s;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.select-container:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+select {
+    color: #fff;
+    background-color: none;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    max-width: 400px;
+    border-radius: 12px;
+    font-family: 'Open Sans', sans-serif;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+option{
+    color: #000;
+    font-weight: 400;
+    box-shadow: none;
+}
+
+label{
+    font-weight: 300;
+}
+
+.csc{
+    white-space: nowrap;
+    margin: 0 8px;
+    text-align: center;
+    border: solid 2px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 4px;
+}
