@@ -53,7 +53,7 @@ export default function RegisterForm({ onClose, slot }) {
           className="f2"
           maxLength={10}
           pattern="^[0-9]{10}$"
-          id="phone" 
+          id="phone"
           required
         />
       </div>

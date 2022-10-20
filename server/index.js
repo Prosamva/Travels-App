@@ -124,6 +124,7 @@ app.post("/register", upload.single("face"), (req, res) => {
         handleError(err, res);
         return;
       }
+      console.log(data);
 
       const faceMatches = data.FaceMatches;
       if (faceMatches != null && faceMatches.length > 0) {
@@ -131,6 +132,7 @@ app.post("/register", upload.single("face"), (req, res) => {
         register(res, commands.updateCustomer, [email, name, phone, face_id], [face_id, bus_id]);
       } else {
         rekognition.indexFaces(params, (err, data) => {
+          console.log(data);
           if (err) {
             handleError(err, res);
             return;
@@ -141,6 +143,7 @@ app.post("/register", upload.single("face"), (req, res) => {
             return;
           }
           const face_id = faceRecords[0].Face.FaceId;
+          console.log(face_id);
           register(res, commands.addCustomer, [face_id, email, name, phone], [face_id, bus_id]);
         });
       }

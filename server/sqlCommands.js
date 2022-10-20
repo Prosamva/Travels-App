@@ -1,33 +1,33 @@
 // MySQL
 module.exports = {
 
-    towns: 
+    towns:
     `SELECT * FROM Town;`,
-    
-    register: 
+
+    register:
     `INSERT IGNORE INTO Registrations VALUE (?, ?);`,
 
-    addCustomer: 
+    addCustomer:
     `INSERT INTO Customer VALUE(?, ?, ?, ?);`,
 
-    customer: 
+    customer:
     `SELECT * FROM Customer WHERE face_id=?;`,
 
-    updateCustomer: 
+    updateCustomer:
     `UPDATE Customer SET email=?, name=?, phone=? WHERE face_id=?;`,
 
-    removeCustomer: 
+    removeCustomer:
     `DELETE FROM Customer WHERE face_id=?`,
 
-    authorize: 
+    authorize:
     `DELETE FROM Registrations WHERE face_id=? AND bus_id=?;`,
 
-    removeRegistrations: 
+    removeRegistrations:
     `DELETE FROM Registrations WHERE face_id=?;`,
 
     info:
-    (clause) => 
-    `SELECT 
+    (clause) =>
+    `SELECT
         B.id AS bus_id,
         B.brand,
         B.chair_count,
